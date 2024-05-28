@@ -1,7 +1,8 @@
 # Portfolio
 <p align="center">
-  <img src="https://github.com/jnvshubham7/Portfolio/assets/69629803/e8a0aea3-dc64-484f-a92c-66d6dae749a4" alt="Screenshot" width="600" />
+  <img src="https://github.com/jnvshubham7/Portfolio/assets/69629803/f6c1b438-c55a-44a7-8f1c-391d47eb21a1" alt="Screenshot" width="600" />
 </p>
+
 
 
 ## [Deploy Link: Portfolio](https://shubham-bhokta.vercel.app/)
