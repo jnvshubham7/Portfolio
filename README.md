@@ -1,7 +1,8 @@
 # Portfolio
 <p align="center">
-  <img src="https://github.com/jnvshubham7/Portfolio/assets/69629803/f6c1b438-c55a-44a7-8f1c-391d47eb21a1" alt="Screenshot" width="600" />
+  <img src="https://github.com/jnvshubham7/Portfolio/assets/69629803/5a951886-48ee-4699-8967-26270c6b00e8" alt="Screenshot" width="600" />
 </p>
+
 
 
 
