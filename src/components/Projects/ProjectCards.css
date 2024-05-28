@@ -1,0 +1,27 @@
+.project-card-view {
+    margin: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .project-card-view .project-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .project-card-view.web-app .project-img {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+  }
+  
+  .project-card-view.android-app .project-img {
+    width: auto;
+    height: 300px; /* Adjust height as needed */
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
