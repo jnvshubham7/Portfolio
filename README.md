@@ -1,12 +1,21 @@
-# Portfolio
+<h2 align="center">
+  Portfolio Website<br/>
+  
+</h2>
 <p align="center">
-  <img src="https://github.com/jnvshubham7/Portfolio/assets/69629803/5a951886-48ee-4699-8967-26270c6b00e8" alt="Screenshot" width="600" />
+  <img src="https://github.com/jnvshubham7/Portfolio/assets/69629803/235f3148-9b39-43e8-b696-eaa344b34c92" alt="Screenshot" width="600" />
 </p>
 
 
 
 
-## [Deploy Link: Portfolio](https://shubham-bhokta.vercel.app/)
+
+
+<h2 align="center">
+  <a href="https://shubham-bhokta.vercel.app/" style="display: inline-block;">Deploy Link - Portfolio</a>
+  
+</h2>
+
 
 ---
 
