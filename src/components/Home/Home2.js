@@ -15,41 +15,64 @@ function Home2() {
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
-            </h1>
-            <p className="home-about-body">
-              I fell in love with programming and have learned a lot over the years.
-              <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> C++, Java, and Python. </b>
-              </i>
-              <br />
-              <br />
-              My field of interest includes building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products</b> and
-                exploring areas related to{" "}
-                <b className="purple">Machine Learning and Data Science.</b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Libraries and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js</b>
-              </i>
-            </p>
-          </Col>
+        <Col md={8} className="home-about-description">
+  <h1 style={{ fontSize: "2.6em" }}>
+    LET ME <span className="purple"> INTRODUCE </span> MYSELF
+  </h1>
+  <p className="home-about-body">
+    I fell in love with programming and have honed my skills over the years.
+    <br />
+    <br />
+    I am proficient in
+    <i>
+      <b className="purple"> C, C++, Python, and Java, </b>
+    </i>
+    with a solid understanding of data structures and algorithms, object-oriented programming, and operating systems.
+    <br />
+    <br />
+    My expertise includes building web applications using
+    <i>
+      <b className="purple"> React, JavaScript, HTML, CSS, </b>
+    </i>
+    and
+    <i>
+      <b className="purple"> Bootstrap. </b>
+    </i>
+    I developed and deployed the TextUtils web application for text manipulation and analysis.
+    <br />
+    <br />
+    I am also skilled in creating Android applications using
+    <i>
+      <b className="purple"> Java and Android Studio. </b>
+    </i>
+    Notable projects include ChatsApp and Expense Tracker, both available on the Mi App Store, incorporating
+    <i>
+      <b className="purple"> Firebase </b>
+    </i>
+    for backend services.
+    <br />
+    <br />
+    My experience extends to database management systems like
+    <i>
+      <b className="purple"> Firebase Database </b>
+    </i>
+    and
+    <i>
+      <b className="purple"> Realm. </b>
+    </i>
+    <br />
+    <br />
+    I am proficient with development tools such as
+    <i>
+      <b className="purple"> Git, Visual Studio Code, </b>
+    </i>
+    and
+    <i>
+      <b className="purple"> Android Studio. </b>
+    </i>
+  </p>
+</Col>
+
           <Col md={4} className="myAvtar">
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
