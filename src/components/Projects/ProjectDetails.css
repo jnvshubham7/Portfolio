@@ -74,10 +74,47 @@
 
 
 .project-card {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  /* White background for the card */
+  border-radius: 8px; /* Smooth corners */
+  box-shadow: 0 4px 8px rgba(7, 138, 109, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Internal spacing */
+  margin: 20px; /* External spacing */
+  max-width: 400px; /* Limit card width */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions for hover effects */
 }
+
+.project-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(7, 138, 109, 0.2); /* Stronger shadow on hover */
+}
+
+.project-card h3 {
+  font-size: 1.5em; /* Headline size */
+  margin-bottom: 10px; /* Space below headline */
+  color: #074E6D; /* Darker shade for headline text */
+}
+
+.project-card p {
+  font-size: 1em; /* Body text size */
+  color: #555; /* Gray color for body text */
+  line-height: 1.5; /* Improved readability */
+}
+
+.project-card a {
+  display: inline-block; /* Block-level link */
+  margin-top: 15px; /* Space above the link */
+  padding: 10px 15px; /* Internal padding for the link */
+  background-color: #078A6D; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px; /* Smooth corners for the button */
+  transition: background-color 0.2s; /* Smooth transition for background color change */
+}
+
+.project-card a:hover {
+  background-color: #056A53; /* Darker background color on hover */
+}
+
 
 .markdown-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
