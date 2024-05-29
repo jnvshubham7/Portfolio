@@ -33,7 +33,7 @@ function ProjectDetails() {
     <Container fluid className="project-details-section">
       <Container>
         <h1 className="project-heading">
-          {projectId} <strong className="purple">Details</strong>
+           <strong className="purple"> Project Details</strong>
         </h1>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={10} className="project-card">
