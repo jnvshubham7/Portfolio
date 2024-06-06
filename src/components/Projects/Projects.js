@@ -7,6 +7,8 @@ import chatsApp from "../../Assets/Projects/chatsApp.png";
 import expenseTracker from "../../Assets/Projects/expenseTracker.png";
 import airline from "../../Assets/Projects/Airline.jpg";
 import geospatial from "../../Assets/Projects/Geospatial.jpg";
+import Calculator from "../../Assets/Projects/Calculator.jpg";
+import "./Projects.css"; // Import the CSS file
 
 function Projects() {
   return (
@@ -19,18 +21,9 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
+
+        <h2 className="project-subheading android">Android Projects</h2>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCards
-              imgPath={textUtils}
-              title="TextUtils"
-              description="Text manipulation and analysis tool. Features include text transformation, clipboard convenience, text clearing, titlecase conversion, speech synthesis, and space management. Free to use and browser compatible."
-              projectId="TextUtils"
-              projectType="web-app"
-              ghLink="https://github.com/jnvshubham7/TextUtils"
-              demoLink="https://jnvshubham7.github.io/TextUtils/"
-            />
-          </Col>
           <Col md={4} className="project-card">
             <ProjectCards
               imgPath={chatsApp}
@@ -75,6 +68,38 @@ function Projects() {
               demoLink="https://github.com/jnvshubham7/Geospatial-Data-Analysis-of-Prayagraj/tree/main/Android%20App"
             />
           </Col>
+        </Row>
+
+        <h2 className="project-subheading web">Web Projects</h2>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card web-card">
+            <ProjectCards
+              imgPath={textUtils}
+              title="TextUtils"
+              description="Text manipulation and analysis tool. Features include text transformation, clipboard convenience, text clearing, titlecase conversion, speech synthesis, and space management. Free to use and browser compatible."
+              projectId="TextUtils"
+              projectType="web-app"
+              ghLink="https://github.com/jnvshubham7/TextUtils"
+              demoLink="https://jnvshubham7.github.io/TextUtils/"
+            />
+          </Col>
+          {/* Add more web projects here */}
+        </Row>
+
+        <h2 className="project-subheading react-native">React Native Projects</h2>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCards
+              imgPath={Calculator} // Add an appropriate image path for the project
+              title="Unit Converter and Calculator App"
+              description="This React Native application serves as a unit converter and calculator, allowing users to perform conversions between various units of measurement and basic arithmetic calculations. Features include unit conversion, basic calculator, and dark/light mode toggle."
+              projectId="Calculator-Native-App"
+              projectType="android-app" // Keeping the same styling as Android projects
+              ghLink="https://github.com/jnvshubham7/Calculator-Native-App"
+              demoLink="https://github.com/jnvshubham7/Calculator-Native-App"
+            />
+          </Col>
+          {/* Add more React Native projects here */}
         </Row>
       </Container>
     </Container>
