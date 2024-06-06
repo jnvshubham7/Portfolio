@@ -7,6 +7,7 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import ProjectDetails from "./components/Projects/ProjectDetails";
+import { Analytics } from "@vercel/analytics/react";
 import {
   BrowserRouter as Router,
   Route,
@@ -32,6 +33,7 @@ function App() {
   return (
     <Router>
       <Preloader load={load} />
+      <Analytics id="prj_lnHwnZlZlR6oBlrGypQHYsX6tGR6" /> {/* Correct placement */}
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
@@ -41,12 +43,13 @@ function App() {
           <Route path="/projects/:projectId" element={<ProjectDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </div>
     </Router>
   );
 }
+
 
 export default App;
