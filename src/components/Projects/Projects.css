@@ -1,0 +1,23 @@
+.project-subheading.android {
+    color: #3ddc84; /* Android green */
+  }
+  
+  .project-subheading.web {
+    color: #4285f4; /* Web blue */
+  }
+  
+  .project-subheading.react-native {
+    color: #61dafb; /* React Native blue */
+  }
+  
+  .web-card .project-card-view {
+    height: 400px; /* Set a good height for web project cards */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .web-card .project-img {
+    height: 200px; /* Set the height of the image */
+    object-fit: cover; /* Ensure the image covers the area */
+  }
+  
