@@ -7,6 +7,7 @@ import chatsApp from "../../Assets/Projects/chatsApp.png";
 import expenseTracker from "../../Assets/Projects/expenseTracker.png";
 import airline from "../../Assets/Projects/Airline.jpg";
 import geospatial from "../../Assets/Projects/Geospatial.jpg";
+import Calculator from "../../Assets/Projects/Calculator.jpg";
 import "./Projects.css"; // Import the CSS file
 
 function Projects() {
@@ -89,7 +90,7 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCards
-              imgPath="" // Add an appropriate image path for the project
+              imgPath={Calculator} // Add an appropriate image path for the project
               title="Unit Converter and Calculator App"
               description="This React Native application serves as a unit converter and calculator, allowing users to perform conversions between various units of measurement and basic arithmetic calculations. Features include unit conversion, basic calculator, and dark/light mode toggle."
               projectId="Calculator-Native-App"
