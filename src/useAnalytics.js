@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { logEvent } from 'firebase/analytics';
-import { analytics } from './firebase-config';
+import { analytics } from './firebase';
 
 const useAnalytics = () => {
   const location = useLocation();
