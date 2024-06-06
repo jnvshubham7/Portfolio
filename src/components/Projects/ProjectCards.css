@@ -1,9 +1,9 @@
-.project-card-view {
+/* .project-card-view {
   margin: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
-}
+} */
 
 .project-card-view .project-img {
   width: 100%;
@@ -27,4 +27,19 @@
 
 .project-card-view .btn {
   margin: 10px 10px 0 0; /* Add margin to all buttons */
+}
+
+.project-card-view {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card-view:hover {
+  transform: scale(1.05);
+}
+
+.project-img {
+  height: 180px;
+  object-fit: cover;
 }

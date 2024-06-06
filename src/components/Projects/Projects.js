@@ -87,7 +87,18 @@ function Projects() {
 
         <h2 className="project-subheading react-native">React Native Projects</h2>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {/* Add React Native projects here */}
+          <Col md={4} className="project-card">
+            <ProjectCards
+              imgPath="" // Add an appropriate image path for the project
+              title="Unit Converter and Calculator App"
+              description="This React Native application serves as a unit converter and calculator, allowing users to perform conversions between various units of measurement and basic arithmetic calculations. Features include unit conversion, basic calculator, and dark/light mode toggle."
+              projectId="Calculator-Native-App"
+              projectType="android-app" // Keeping the same styling as Android projects
+              ghLink="https://github.com/jnvshubham7/Calculator-Native-App"
+              demoLink="https://github.com/jnvshubham7/Calculator-Native-App"
+            />
+          </Col>
+          {/* Add more React Native projects here */}
         </Row>
       </Container>
     </Container>
