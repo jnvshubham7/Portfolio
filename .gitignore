@@ -131,3 +131,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+.vercel
+
+src/firebase-config.js
