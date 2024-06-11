@@ -74,7 +74,14 @@ const ContactUs = () => {
               onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
-            <button type="submit">SEND MESSAGE</button>
+            <button type="submit" className="send-message-button">
+              SEND MESSAGE
+              {showAlert && (
+                <span className={`alert ${status.includes('successfully') ? 'alert-success' : 'alert-error'}`}>
+                  {status}
+                </span>
+              )}
+            </button>
           </form>
         </div>
         <div className="contact-card">
@@ -95,11 +102,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      {showAlert && (
-        <div className="alert">
-          {status}
-        </div>
-      )}
     </div>
   );
 };
