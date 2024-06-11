@@ -4,6 +4,11 @@
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  position: relative;
+}
+
+.contact-us-heading {
+  padding-top: 40px; /* Adjust the padding as needed */
 }
 
 .contact-cards {
@@ -54,11 +59,6 @@
   background-color: #0056b3;
 }
 
-.status-message {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
 .contact-info p {
   margin: 5px 0;
 }
@@ -70,4 +70,18 @@
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+.alert {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-weight: bold;
 }

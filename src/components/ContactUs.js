@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import './ContactUs.css';
 
@@ -8,6 +6,7 @@ const ContactUs = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,11 +34,16 @@ const ContactUs = () => {
       setStatus('Failed to send message');
       console.error('Error:', error);
     }
+
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 3000);
   };
 
   return (
     <div className="contact-us-container">
-      <h1>Contact Us</h1>
+      <h1 className="contact-us-heading">Contact Us</h1>
       <p>
         Feel free to reach out to me via email, connect with me on WhatsApp, or use the contact form to send me a message to discuss potential collaborations or opportunities.
       </p>
@@ -72,7 +76,6 @@ const ContactUs = () => {
             ></textarea>
             <button type="submit">SEND MESSAGE</button>
           </form>
-          {status && <p className="status-message">{status}</p>}
         </div>
         <div className="contact-card">
           <h2>Contact Information</h2>
@@ -92,9 +95,13 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      {showAlert && (
+        <div className="alert">
+          {status}
+        </div>
+      )}
     </div>
   );
 };
 
 export default ContactUs;
-
