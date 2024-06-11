@@ -19,6 +19,18 @@
   cursor: pointer;
 }
 
+.mic-button:hover::after {
+  content: 'Speak';
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
 .mic-icon {
   font-size: 24px;
 }

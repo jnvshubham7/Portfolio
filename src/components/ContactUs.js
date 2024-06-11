@@ -126,14 +126,14 @@ const ContactUs = () => {
               required
             />
             <div className="textarea-container">
-              <textarea
+               <textarea
                 ref={textareaRef}
-                placeholder="Please describe your needs here..."
+                placeholder="Please describe your needs here... (You can use the speak button)"
                 value={message + interimMessage}
                 onChange={(e) => setMessage(e.target.value)}
                 required
-              ></textarea>
-              <button type="button" className="mic-button" onClick={handleMicClick}>
+            ></textarea>
+              <button type="button" className="mic-button"   onClick={handleMicClick}>
                 <FontAwesomeIcon icon={faMicrophone} className={`mic-icon ${isListening ? 'listening' : ''}`} />
               </button>
             </div>
@@ -165,11 +165,11 @@ const ContactUs = () => {
             </p>
             <p>
               <FontAwesomeIcon icon={faWhatsapp} className="icon" />
-              <strong> WhatsApp:</strong> <a href="https://wa.me/+917654889915" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              <strong> WhatsApp:</strong> <a href="https://wa.me/+917654889915" target="_blank" rel="noopener noreferrer">+917654889915</a>
             </p>
             <p>
               <FontAwesomeIcon icon={faLinkedin} className="icon" />
-              <strong> LinkedIn:</strong> <a href="https://www.linkedin.com/in/shubham-kumar-bhokta-97113116b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+              <strong> LinkedIn:</strong> <a href="https://www.linkedin.com/in/shubham-kumar-bhokta-97113116b/" target="_blank" rel="noopener noreferrer">shubham-kumar-bhokta</a>
             </p>
           </div>
         </div>
