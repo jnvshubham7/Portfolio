@@ -39,17 +39,19 @@
 .contact-us-heading {
   color: var(--primary-color);
   text-align: center;
+  /* //txt to bold  */
+  font-weight: bold;
   margin-top: 60px;
   margin-bottom: 40px;
   font-size: 2.5rem;
-  padding-top: 40px; /* Adjust the padding as needed */
+  padding-top: 60px; /* Adjust the padding as needed */
 }
 
 .contact-cards {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 
 .contact-card {
@@ -156,3 +158,4 @@
 .contact-info a:hover {
   text-decoration: underline;
 }
+
