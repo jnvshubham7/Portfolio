@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMapMarkerAlt, faPhone, faPaperPlane, faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -12,6 +12,15 @@ const ContactUs = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [interimMessage, setInterimMessage] = useState('');
+
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
+  }, [message]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -118,6 +127,7 @@ const ContactUs = () => {
             />
             <div className="textarea-container">
               <textarea
+                ref={textareaRef}
                 placeholder="Please describe your needs here..."
                 value={message + interimMessage}
                 onChange={(e) => setMessage(e.target.value)}
