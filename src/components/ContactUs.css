@@ -11,7 +11,7 @@
 
 @media (prefers-color-scheme: dark) {
   .contact-us-container {
-    background: var(--dark-bg);
+    background: #1a1328;
     color: var(--text-color-dark);
   }
   .contact-card {
@@ -21,7 +21,7 @@
 
 @media (prefers-color-scheme: light) {
   .contact-us-container {
-    background: var(--light-bg);
+    background: #1a1328;
     color: var(--text-color-light);
   }
   .contact-card {
