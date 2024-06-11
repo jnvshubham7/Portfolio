@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMapMarkerAlt, faPhone, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMapMarkerAlt, faPhone, faPaperPlane, faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './ContactUs.css';
-
-
-
 
 const ContactUs = () => {
   const [name, setName] = useState('');
@@ -13,6 +10,8 @@ const ContactUs = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
   const [showAlert, setShowAlert] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const [interimMessage, setInterimMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,9 +46,48 @@ const ContactUs = () => {
     }, 3000);
   };
 
+  const handleMicClick = () => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert('Speech recognition is not supported in this browser.');
+      return;
+    }
 
+    const recognition = new SpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'en-US';
 
-  
+    if (isListening) {
+      recognition.stop();
+      setIsListening(false);
+      return;
+    }
+
+    recognition.start();
+    setIsListening(true);
+
+    recognition.onresult = (event) => {
+      let finalTranscript = '';
+      let interimTranscript = '';
+
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          finalTranscript += transcript + ' ';
+        } else {
+          interimTranscript += transcript;
+        }
+      }
+
+      setMessage(prevMessage => prevMessage + finalTranscript);
+      setInterimMessage(interimTranscript);
+    };
+
+    recognition.onend = () => {
+      setIsListening(false);
+    };
+  };
 
   return (
     <div className="contact-us-container">
@@ -78,12 +116,17 @@ const ContactUs = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <textarea
-              placeholder="Please describe your needs here..."
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            ></textarea>
+            <div className="textarea-container">
+              <textarea
+                placeholder="Please describe your needs here..."
+                value={message + interimMessage}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              ></textarea>
+              <button type="button" className="mic-button" onClick={handleMicClick}>
+                <FontAwesomeIcon icon={faMicrophone} className={`mic-icon ${isListening ? 'listening' : ''}`} />
+              </button>
+            </div>
             <button type="submit" className="send-message-button">
               <FontAwesomeIcon icon={faPaperPlane} />
               SEND MESSAGE
