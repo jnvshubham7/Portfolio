@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faMapMarkerAlt, faPhone, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './ContactUs.css';
 
 const ContactUs = () => {
@@ -75,6 +78,7 @@ const ContactUs = () => {
               required
             ></textarea>
             <button type="submit" className="send-message-button">
+              <FontAwesomeIcon icon={faPaperPlane} />
               SEND MESSAGE
               {showAlert && (
                 <span className={`alert ${status.includes('successfully') ? 'alert-success' : 'alert-error'}`}>
@@ -88,16 +92,24 @@ const ContactUs = () => {
           <h2>Contact Information</h2>
           <div className="contact-info">
             <p>
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
               <strong>Address:</strong> Madhupur, Deoghar, Jharkhand, India (815353)
             </p>
             <p>
+              <FontAwesomeIcon icon={faPhone} className="icon" />
               <strong>Phone:</strong> +91 7654889915
             </p>
             <p>
+              <FontAwesomeIcon icon={faEnvelope} className="icon" />
               <strong>Email:</strong> <a href="mailto:jnvshubham1@gmail.com">jnvshubham1@gmail.com</a>
             </p>
             <p>
+              <FontAwesomeIcon icon={faWhatsapp} className="icon" />
               <strong>WhatsApp:</strong> <a href="https://wa.me/+917654889915" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faLinkedin} className="icon" />
+              <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
             </p>
           </div>
         </div>
