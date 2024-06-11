@@ -4,6 +4,9 @@ import { faEnvelope, faMapMarkerAlt, faPhone, faPaperPlane } from '@fortawesome/
 import { faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './ContactUs.css';
 
+
+
+
 const ContactUs = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -43,6 +46,10 @@ const ContactUs = () => {
       setShowAlert(false);
     }, 3000);
   };
+
+
+
+  
 
   return (
     <div className="contact-us-container">
@@ -93,23 +100,23 @@ const ContactUs = () => {
           <div className="contact-info">
             <p>
               <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-              <strong>Address:</strong> Madhupur, Deoghar, Jharkhand, India (815353)
+              <strong> Address:</strong> Madhupur, Deoghar, Jharkhand, India (815353)
             </p>
             <p>
               <FontAwesomeIcon icon={faPhone} className="icon" />
-              <strong>Phone:</strong> +91 7654889915
+              <strong> Phone:</strong> +91 7654889915
             </p>
             <p>
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
-              <strong>Email:</strong> <a href="mailto:jnvshubham1@gmail.com">jnvshubham1@gmail.com</a>
+              <strong> Email:</strong> <a href="mailto:jnvshubham1@gmail.com">jnvshubham1@gmail.com</a>
             </p>
             <p>
               <FontAwesomeIcon icon={faWhatsapp} className="icon" />
-              <strong>WhatsApp:</strong> <a href="https://wa.me/+917654889915" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              <strong> WhatsApp:</strong> <a href="https://wa.me/+917654889915" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
             </p>
             <p>
               <FontAwesomeIcon icon={faLinkedin} className="icon" />
-              <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+              <strong> LinkedIn:</strong> <a href="https://www.linkedin.com/in/shubham-kumar-bhokta-97113116b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
             </p>
           </div>
         </div>
