@@ -53,7 +53,7 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us-container">
-      <h1 className="contact-us-heading">Contact Us</h1>
+      <h1 className="contact-us-heading">Contact Me</h1>
       <p>
         Feel free to reach out to me via email, connect with me on WhatsApp, or use the contact form to send me a message to discuss potential collaborations or opportunities.
       </p>
@@ -100,7 +100,7 @@ const ContactUs = () => {
           <div className="contact-info">
             <p>
               <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-              <strong> Address:</strong> Madhupur, Deoghar, Jharkhand, India (815353)
+              <strong> Address:</strong> Madhupur, Deoghar, Jharkhand, India
             </p>
             <p>
               <FontAwesomeIcon icon={faPhone} className="icon" />
