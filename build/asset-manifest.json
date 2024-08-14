@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8952cf6c.css",
+    "main.js": "/static/js/main.f175f03f.js",
+    "static/js/453.5858e738.chunk.js": "/static/js/453.5858e738.chunk.js",
+    "static/media/Airline.jpg": "/static/media/Airline.bcadccb47d94d4180205.jpg",
+    "static/media/Calculator.jpg": "/static/media/Calculator.5146ef86f2e409885ccd.jpg",
+    "static/media/resume.pdf": "/static/media/resume.2d8f3e09952535b42cfa.pdf",
+    "static/media/expenseTracker.png": "/static/media/expenseTracker.b88165d7031ce456aa58.png",
+    "static/media/Geospatial.jpg": "/static/media/Geospatial.650741232e51d01573da.jpg",
+    "static/media/home-main.svg": "/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
+    "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/chatsApp.png": "/static/media/chatsApp.6787ad103eb91961bb78.png",
+    "static/media/textUtils.png": "/static/media/textUtils.008656fbd91951099e69.png",
+    "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/avatar.svg": "/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
+    "static/media/pre.svg": "/static/media/pre.4410c5baaa673cc131da.svg",
+    "index.html": "/index.html",
+    "main.8952cf6c.css.map": "/static/css/main.8952cf6c.css.map",
+    "main.f175f03f.js.map": "/static/js/main.f175f03f.js.map",
+    "453.5858e738.chunk.js.map": "/static/js/453.5858e738.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8952cf6c.css",
+    "static/js/main.f175f03f.js"
+  ]
+}
