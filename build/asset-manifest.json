@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8952cf6c.css",
-    "main.js": "/static/js/main.f175f03f.js",
+    "main.js": "/static/js/main.718dea65.js",
     "static/js/453.5858e738.chunk.js": "/static/js/453.5858e738.chunk.js",
     "static/media/Airline.jpg": "/static/media/Airline.bcadccb47d94d4180205.jpg",
     "static/media/Calculator.jpg": "/static/media/Calculator.5146ef86f2e409885ccd.jpg",
@@ -17,11 +17,11 @@
     "static/media/pre.svg": "/static/media/pre.4410c5baaa673cc131da.svg",
     "index.html": "/index.html",
     "main.8952cf6c.css.map": "/static/css/main.8952cf6c.css.map",
-    "main.f175f03f.js.map": "/static/js/main.f175f03f.js.map",
+    "main.718dea65.js.map": "/static/js/main.718dea65.js.map",
     "453.5858e738.chunk.js.map": "/static/js/453.5858e738.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8952cf6c.css",
-    "static/js/main.f175f03f.js"
+    "static/js/main.718dea65.js"
   ]
 }
