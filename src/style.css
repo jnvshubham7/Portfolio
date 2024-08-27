@@ -362,7 +362,9 @@ button:focus {
   background: rgba(255, 255, 255, 0.972) !important;
   border-radius: 50% !important;
   transition: 0.5s !important;
+  cursor: pointer; /* Make sure cursor changes to pointer */
 }
+
 
 .home-social-icons::before {
   content: "";
@@ -381,6 +383,8 @@ button:focus {
 .home-social-icons:hover::before {
   transform: scale(1.1);
   box-shadow: 0 0 15px #801f95;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .home-social-icons:hover {
@@ -395,8 +399,10 @@ button:focus {
   padding-left: 15px;
 }
 
-.icon-colour {
-  color: #700c86 !important;
+/* Ensure that pointer events are enabled */
+.icon-colour, .home-social-icons {
+  pointer-events: auto; /* Ensure pointer events are enabled */
+  cursor: pointer; /* Change cursor to indicate clickable links */
 }
 
 /* --------- */

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shubham-bhokta.vercel.app/</loc>
+    <loc>https://shubhambhokta.vercel.app/</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://shubham-bhokta.vercel.app/projects</loc>
+    <loc>https://shubhambhokta.vercel.app/projects</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://shubham-bhokta.vercel.app/about</loc>
+    <loc>https://shubhambhokta.vercel.app/about</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://shubham-bhokta.vercel.app/resume</loc>
+    <loc>https://shubhambhokta.vercel.app/resume</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://shubham-bhokta.vercel.app/contact</loc>
+    <loc>https://shubhambhokta.vercel.app/contact</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
