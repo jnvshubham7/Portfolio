@@ -155,18 +155,18 @@ const ContactUs = () => {
               <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
               <strong> Address:</strong> Madhupur, Deoghar, Jharkhand, India
             </p>
-            <p>
+            {/* <p>
               <FontAwesomeIcon icon={faPhone} className="icon" />
               <strong> Phone:</strong> +91 7654889915
-            </p>
+            </p> */}
             <p>
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
               <strong> Email:</strong> <a href="mailto:jnvshubham1@gmail.com">jnvshubham1@gmail.com</a>
             </p>
-            <p>
+            {/* <p>
               <FontAwesomeIcon icon={faWhatsapp} className="icon" />
               <strong> WhatsApp:</strong> <a href="https://wa.me/+917654889915" target="_blank" rel="noopener noreferrer">+917654889915</a>
-            </p>
+            </p> */}
             <p>
               <FontAwesomeIcon icon={faLinkedin} className="icon" />
               <strong> LinkedIn:</strong> <a href="https://www.linkedin.com/in/shubham-kumar-bhokta-97113116b/" target="_blank" rel="noopener noreferrer">shubham-kumar-bhokta</a>
