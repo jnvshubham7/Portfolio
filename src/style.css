@@ -256,11 +256,11 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: 1; /* Make sure the section is on top */
+  /* z-index: 1;  */
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for night mode */
+  background-color: rgba(0, 0, 0, 0.5); 
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
