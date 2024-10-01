@@ -9,7 +9,7 @@ function ProjectCards(props) {
   return (
     <Card
       className={`project-card-view ${props.projectType}`}
-      onClick={() => (window.location.href = `/projects/${props.projectId}`)}
+      onClick={() => (window.location.href = `/projects/${props.projectId}`)} // Card click navigates to project details
     >
       <Card.Img
         variant="top"
@@ -22,23 +22,29 @@ function ProjectCards(props) {
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
+
+        {/* Button for viewing details with stopPropagation */}
         <Button
           variant="primary"
-          onClick={() =>
-            (window.location.href = `/projects/${props.projectId}`)
-          }
+          onClick={(e) => {
+            e.stopPropagation(); // Prevents card click event
+            window.location.href = `/projects/${props.projectId}`; // Navigate to project details
+          }}
         >
           View Details
         </Button>
-        <Button variant="primary" href={props.ghLink} target="_blank">
+
+        {/* GitHub Link */}
+        <Button variant="primary" href={props.ghLink} target="_blank" onClick={(e) => e.stopPropagation()}>
           <BsGithub /> &nbsp;
           {props.isBlog ? "Blog" : "GitHub"}
         </Button>
 
+        {/* Demo link if available */}
         {!props.isBlog && props.demoLink && (
-          <Button variant="primary" href={props.demoLink} target="_blank">
+          <Button variant="primary" href={props.demoLink} target="_blank" onClick={(e) => e.stopPropagation()}>
             <CgWebsite /> &nbsp;
-            {"Demo"}
+            {"App/Web Link"}
           </Button>
         )}
       </Card.Body>
