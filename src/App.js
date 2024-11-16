@@ -11,12 +11,13 @@ import Resume from "./components/Resume/ResumeNew";
 import ProjectDetails from "./components/Projects/ProjectDetails";
 import {
   BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
+  Route, 
+  Routes, 
+  Navigate 
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import useAnalytics from "./useAnalytics"; // Import the custom hook
+import { Analytics } from '@vercel/analytics/react';
+
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -35,30 +36,24 @@ function App() {
 
   return (
     <Router>
-      <AnalyticsWrapper>
-        <Preloader load={load} />
-        <div className="App" id={load ? "no-scroll" : "scroll"}>
-          <Navbar />
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:projectId" element={<ProjectDetails />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="*" element={<Navigate to="/"/>} />
-          </Routes>
-          <Footer />
-        </div>
-      </AnalyticsWrapper>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:projectId" element={<ProjectDetails />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+        <Footer />
+      </div>
+      <Analytics /> {/* Include the Analytics component here */}
     </Router>
   );
-}
-
-function AnalyticsWrapper({ children }) {
-  useAnalytics(); // Use the custom hook to track page views
-  return children;
 }
 
 export default App;

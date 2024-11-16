@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/profile.png";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -15,63 +15,55 @@ function Home2() {
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-        <Col md={8} className="home-about-description">
-  <h1 style={{ fontSize: "2.6em" }}>
-    LET ME <span className="purple"> INTRODUCE </span> MYSELF
-  </h1>
-  <p className="home-about-body">
-    I fell in love with programming and have honed my skills over the years.
-    <br />
-    <br />
-    I am proficient in
-    <i>
-      <b className="purple"> C, C++, Python, and Java, </b>
-    </i>
-    with a solid understanding of data structures and algorithms, object-oriented programming, and operating systems.
-    <br />
-    <br />
-    My expertise includes building web applications using
-    <i>
-      <b className="purple"> React, JavaScript, HTML, CSS, </b>
-    </i>
-    and
-    <i>
-      <b className="purple"> Bootstrap. </b>
-    </i>
-    I developed and deployed the TextUtils web application for text manipulation and analysis.
-    <br />
-    <br />
-    I am also skilled in creating Android applications using
-    <i>
-      <b className="purple"> Java and Android Studio. </b>
-    </i>
-    Notable projects include ChatsApp and Expense Tracker, both available on the Mi App Store, incorporating
-    <i>
-      <b className="purple"> Firebase </b>
-    </i>
-    for backend services.
-    <br />
-    <br />
-    My experience extends to database management systems like
-    <i>
-      <b className="purple"> Firebase Database </b>
-    </i>
-    and
-    <i>
-      <b className="purple"> Realm. </b>
-    </i>
-    <br />
-    <br />
-    I am proficient with development tools such as
-    <i>
-      <b className="purple"> Git, Visual Studio Code, </b>
-    </i>
-    and
-    <i>
-      <b className="purple"> Android Studio. </b>
-    </i>
-  </p>
-</Col>
+          <Col md={8} className="home-about-description">
+            <h1 style={{ fontSize: "2.6em" }}>
+              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+            </h1>
+            <p className="home-about-body">
+              I'm Shubham Kumar Bhokta, a passionate software developer and a graduate from the 
+              <i>
+                <b className="purple"> Indian Institute of Information Technology, Allahabad.</b>
+              </i>
+              <br />
+              <br />Over the years, I've honed my skills in 
+              <i>
+                <b className="purple"> C++, Java, Python, and Dart, </b>
+              </i>
+              along with a deep understanding of data structures, algorithms, and object-oriented programming.
+              <br />
+              <br />
+              My journey in software development has led me to create impactful projects such as 
+              <i>
+                <b className="purple"> ChatsApp,</b>
+              </i>
+              an Android app with over 115 users, and 
+              <i>
+                <b className="purple"> TextToolkit,</b>
+              </i>
+              a web-based text manipulation tool.
+              <br />
+              <br />
+              Recently, I completed a software development internship at 
+              <i>
+                <b className="purple"> Tandem,</b>
+              </i>
+              where I developed and enhanced features for an enterprise-level Flutter-based application, focusing on document management and real-time vehicle tracking.
+              <br />
+              <br />
+              My technical expertise extends to 
+              <i>
+                <b className="purple"> Flutter, React, Firebase, and Google Maps,</b>
+              </i>
+              enabling me to build robust and scalable applications.
+              <br />
+              <br />
+              Beyond technical skills, I am an avid problem solver, with a keen interest in 
+              <i>
+                <b className="purple"> Android and Web Development,</b>
+              </i>
+              striving to create efficient and user-friendly applications.
+            </p>
+          </Col>
 
           <Col md={4} className="myAvtar">
             <Tilt>

@@ -133,4 +133,4 @@ dist
 
 .vercel
 
-src/firebase-config.js
+/src/firebase-config.js

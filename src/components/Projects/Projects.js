@@ -2,13 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCards from "./ProjectCards";
 import Particle from "../Particle";
-import textUtils from "../../Assets/Projects/textUtils.png";
+import TextToolkit from "../../Assets/Projects/TextToolkit.png";
 import chatsApp from "../../Assets/Projects/chatsApp.png";
 import expenseTracker from "../../Assets/Projects/expenseTracker.png";
 import airline from "../../Assets/Projects/Airline.jpg";
 import geospatial from "../../Assets/Projects/Geospatial.jpg";
 import Calculator from "../../Assets/Projects/Calculator.jpg";
 import "./Projects.css"; // Import the CSS file
+import TechieNotes from "../../Assets/Projects/TechieNotes.png";
 
 function Projects() {
   return (
@@ -71,19 +72,36 @@ function Projects() {
         </Row>
 
         <h2 className="project-subheading web">Web Projects</h2>
+
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card web-card">
+
+        <Col md={4} className="project-card web-card">
             <ProjectCards
-              imgPath={textUtils}
-              title="TextUtils"
-              description="Text manipulation and analysis tool. Features include text transformation, clipboard convenience, text clearing, titlecase conversion, speech synthesis, and space management. Free to use and browser compatible."
-              projectId="TextUtils"
+              imgPath={TechieNotes}
+              title="Techie Notes"
+              description="Techie Notes | Articles, Tutorials, and Notes on Technology & Development"
+              projectId="TechieNotes"
               projectType="web-app"
-              ghLink="https://github.com/jnvshubham7/TextUtils"
-              demoLink="https://jnvshubham7.github.io/TextUtils/"
+              ghLink="https://techienotes.vercel.app/"
+              demoLink="https://techienotes.vercel.app/"
             />
           </Col>
-          {/* Add more web projects here */}
+
+
+
+
+          <Col md={4} className="project-card web-card">
+            <ProjectCards
+              imgPath={TextToolkit}
+              title="TextToolkit"
+              description="Text manipulation and analysis tool. Features include text transformation, clipboard convenience, text clearing, titlecase conversion, speech synthesis, and space management. Free to use and browser compatible."
+              projectId="TextToolkit"
+              projectType="web-app"
+              ghLink="https://github.com/jnvshubham7/TextToolkit"
+              demoLink="https://texttoolkit.vercel.app/"
+            />
+          </Col>
         </Row>
 
         <h2 className="project-subheading react-native">React Native Projects</h2>

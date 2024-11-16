@@ -12,7 +12,7 @@
 
 
 <h2 align="center">
-  <a href="https://shubham-bhokta.vercel.app/" style="display: inline-block;">Deploy Link - Portfolio</a>
+  <a href="https://shubhambhokta.vercel.app/" style="display: inline-block;">Deploy Link - Portfolio</a>
   
 </h2>
 
