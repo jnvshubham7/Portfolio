@@ -1,96 +1,102 @@
-.project-card-view {
+/* ProjectCards.css */
+
+/* Base card styling with glass-morphism effect */
+.project-card-neon {
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
-.project-card-view:hover {
+/* Hover effect for the card */
+.project-card-neon:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
-.project-img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+/* Gradient border effect */
+.project-card-neon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(45deg, #ff6f61, #007bff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
 }
 
-.project-card-view .card-body {
-  background-color: #2a2a2a;
-  padding: 20px;
-  border-radius: 0 0 15px 15px;
-}
-
-.project-card-view .card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.project-card-view .card-text {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #ccc;
-}
-
-.project-card-view .btn {
-  background-color: #ff6f61;
-  border: none;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.project-card-view .btn:hover {
-  background-color: #e65c50;
-}
-
-.project-card-view .btn + .btn {
-  margin-left: 10px;
-}
-
-.project-card-view-unique {
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  overflow: hidden;
-}
-
-.project-card-view-unique:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project-card-view-unique .project-img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+/* Image styling */
+.project-img-neon {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   height: 200px;
   object-fit: cover;
+  width: 100%;
+  transition: transform 0.3s ease;
 }
 
-.project-card-view-unique .card-body {
+/* Image zoom effect on hover */
+.project-card-neon:hover .project-img-neon {
+  transform: scale(1.05);
+}
+
+/* Card body styling */
+.project-card-neon .card-body-neon {
   padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
 }
 
-.project-card-view-unique .card-title {
-  font-size: 1.5rem;
+/* Title styling */
+.project-card-neon .card-title-neon {
+  font-size: 1.75rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.project-card-view-unique .card-text {
+/* Description text styling */
+.project-card-neon .card-text-neon {
   font-size: 1rem;
-  color: #555;
+  color: #e0e0e0;
+  margin-bottom: 20px;
 }
 
-.project-card-view-unique .btn-primary {
-  background-color: #007bff;
+/* Button styling with gradient */
+.project-card-neon .btn-neon {
+  background: linear-gradient(45deg, #ff6f61, #007bff);
   border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-right: 10px;
 }
 
-.project-card-view-unique .btn-primary:hover {
-  background-color: #0056b3;
+/* Button hover effect */
+.project-card-neon .btn-neon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* GitHub button specific styling */
+.project-card-neon .btn-github-neon {
+  background: linear-gradient(45deg, #333, #000);
+}
+
+/* Demo button specific styling */
+.project-card-neon .btn-demo-neon {
+  background: linear-gradient(45deg, #007bff, #00bfff);
 }
