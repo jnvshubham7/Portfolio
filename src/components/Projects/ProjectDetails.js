@@ -7,7 +7,7 @@ import 'highlight.js/styles/github.css';
 import hljs from 'highlight.js';
 import './ProjectDetails.css';
 
-function ProjectDetails() {
+function NeonGlowProject() {
   const { projectId } = useParams();
   const [readmeContent, setReadmeContent] = useState('');
 
@@ -30,14 +30,14 @@ function ProjectDetails() {
   }, [readmeContent]);
 
   return (
-    <Container fluid className="project-details-section">
+    <Container fluid className="NeonGlowProject">
       <Container>
-        <h1 className="project-heading">
-           <strong className="purple"> Project Details</strong>
+        <h1 className="NeonGlowProject-heading">
+          <strong className="purple">Project Details</strong>
         </h1>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={10} className="project-card">
-            <div className="markdown-body">
+          <Col md={10} className="NeonGlowProject-card">
+            <div className="NeonGlowProject-markdown">
               <ReactMarkdown rehypePlugins={[rehypeRaw]}>{readmeContent}</ReactMarkdown>
             </div>
           </Col>
@@ -47,4 +47,4 @@ function ProjectDetails() {
   );
 }
 
-export default ProjectDetails;
+export default NeonGlowProject;

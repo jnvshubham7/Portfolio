@@ -1,38 +1,76 @@
-.project-subheading.android {
-    color: #3ddc84; /* Android green */
-  }
-  
-  .project-subheading.web {
-    color: #4285f4; /* Web blue */
-  }
-  
-  .project-subheading.react-native {
-    color: #cb27d1; /* Updated React Native blue */
-  }
-  
-  .web-card .project-card-view {
-    height: 400px; /* Set a good height for web project cards */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .web-card .project-img {
-    height: 200px; /* Set the height of the image */
-    object-fit: cover; /* Ensure the image covers the area */
-  }
-  
-  .project-card-view {
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .project-card-view:hover {
-    transform: scale(1.05);
-  }
-  
-  .project-img {
-    height: 180px;
-    object-fit: cover;
-  }
-  
+/* General styling for the project section */
+.project-section {
+  background-color: #1a1a1a;
+  padding: 60px 0;
+  color: #fff;
+}
+
+.project-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-subheading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  color: #ff6f61;
+  text-align: center;
+}
+
+.project-card {
+  margin-bottom: 30px;
+}
+
+.project-card img {
+  /* width: 100%; */
+  /* height: auto; */
+  border-radius: 10px;
+  /* transition: transform 0.3s ease; */
+}
+
+/* .project-card:hover img {
+  transform: scale(1.05);
+} */
+
+.project-card .card-body {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.project-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.project-card .card-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  background-color: #ff6f61;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background-color: #e65c50;
+}
+
+.android {
+  color: #a4c639;
+}
+
+.web {
+  color: #61dafb;
+}
+
+.react-native {
+  color: #764abc;
+}
