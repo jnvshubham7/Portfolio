@@ -1,4 +1,3 @@
-
 .project-card-view {
   border: none;
   border-radius: 15px;
@@ -49,4 +48,49 @@
 
 .project-card-view .btn + .btn {
   margin-left: 10px;
+}
+
+.project-card-view-unique {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.project-card-view-unique:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-view-unique .project-img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card-view-unique .card-body {
+  padding: 20px;
+}
+
+.project-card-view-unique .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-card-view-unique .card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.project-card-view-unique .btn-primary {
+  background-color: #007bff;
+  border: none;
+  margin-right: 10px;
+}
+
+.project-card-view-unique .btn-primary:hover {
+  background-color: #0056b3;
 }

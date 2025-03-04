@@ -8,7 +8,7 @@ import "./ProjectCards.css"; // Import the CSS file
 function ProjectCards(props) {
   return (
     <Card
-      className={`project-card-view ${props.projectType}`}
+      className={`project-card-view-unique ${props.projectType}`} // Updated class name
       onClick={() => (window.location.href = `/projects/${props.projectId}`)} // Card click navigates to project details
     >
       <Card.Img
@@ -35,14 +35,24 @@ function ProjectCards(props) {
         </Button>
 
         {/* GitHub Link */}
-        <Button variant="primary" href={props.ghLink} target="_blank" onClick={(e) => e.stopPropagation()}>
+        <Button
+          variant="primary"
+          href={props.ghLink}
+          target="_blank"
+          onClick={(e) => e.stopPropagation()}
+        >
           <BsGithub /> &nbsp;
           {props.isBlog ? "Blog" : "GitHub"}
         </Button>
 
         {/* Demo link if available */}
         {!props.isBlog && props.demoLink && (
-          <Button variant="primary" href={props.demoLink} target="_blank" onClick={(e) => e.stopPropagation()}>
+          <Button
+            variant="primary"
+            href={props.demoLink}
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}
+          >
             <CgWebsite /> &nbsp;
             {"App/Web Link"}
           </Button>
