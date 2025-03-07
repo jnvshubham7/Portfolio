@@ -1,24 +1,49 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import 'highlight.js/styles/github.css';
-import hljs from 'highlight.js';
-import './ProjectDetails.css';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import "highlight.js/styles/github.css";
+import hljs from "highlight.js";
+import "./ProjectDetails.css";
+import { Octokit } from "@octokit/rest";
 
 function NeonGlowProject() {
   const { projectId } = useParams();
-  const [readmeContent, setReadmeContent] = useState('');
+  const [readmeContent, setReadmeContent] = useState("");
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchReadme = async () => {
+      const octokit = new Octokit({
+        auth: process.env.REACT_APP_GITHUB_TOKEN, // Ensure this token has the 'repo' scope
+      });
+
       try {
-        const response = await fetch(`https://raw.githubusercontent.com/jnvshubham7/${projectId}/main/README.md`);
-        const text = await response.text();
-        setReadmeContent(text);
+        const { data: repoData } = await octokit.repos.get({
+          owner: "jnvshubham7",
+          repo: projectId,
+        });
+
+        if (repoData) {
+          const { data } = await octokit.repos.getContent({
+            owner: "jnvshubham7",
+            repo: projectId,
+            path: "README.md",
+          });
+          // print full repo link
+          console.log(data.download_url);
+          const content = atob(data.content);
+          setReadmeContent(content);
+        }
       } catch (error) {
-        console.error('Error fetching README:', error);
+        if (error.status === 404) {
+          setError("Repository or README not found.");
+        } else {
+          setError("An error occurred while fetching the README.");
+        }
+        console.error("Error fetching README:", error);
+        console.error("Error details:", error.response);
       }
     };
 
@@ -38,7 +63,13 @@ function NeonGlowProject() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={10} className="NeonGlowProject-card">
             <div className="NeonGlowProject-markdown">
-              <ReactMarkdown rehypePlugins={[rehypeRaw]}>{readmeContent}</ReactMarkdown>
+              {error ? (
+                <p>{error}</p>
+              ) : (
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                  {readmeContent}
+                </ReactMarkdown>
+              )}
             </div>
           </Col>
         </Row>
