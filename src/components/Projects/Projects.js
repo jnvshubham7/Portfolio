@@ -10,6 +10,8 @@ import geospatial from "../../Assets/Projects/Geospatial.jpg";
 import Calculator from "../../Assets/Projects/Calculator.jpg";
 import "./Projects.css"; // Import the CSS file
 import TechieNotes from "../../Assets/Projects/TechieNotes.png";
+import AnzanPro from "../../Assets/Projects/AnzanPro.png";
+import TechieLearn from "../../Assets/Projects/TechieLearn.png";
 
 function Projects() {
   return (
@@ -24,6 +26,30 @@ function Projects() {
         </p>
 
         <h2 className="project-subheading android">Android Projects</h2>
+
+           <Col md={4} className="project-card web-card">
+            <ProjectCards
+              imgPath={AnzanPro}
+              title="AnzanPro - Abacus Learning App"
+              description="Interactive Abacus learning app with gamified UX (2000+ commits). Features Firebase sync, auth, analytics with custom UI and state management. Available as web app and mobile apps for tutors and kids."
+              projectId="AnzanPro"
+              projectType="web-app"
+              ghLink="https://github.com/jnvshubham7/AnzanPro"
+              demoLink="https://www.anzanpro.com"
+            />
+          </Col>
+
+          <Col md={4} className="project-card web-card">
+            <ProjectCards
+              imgPath={TechieLearn}
+              title="TechieLearn - Cross-Platform Learning App"
+              description="Cross-platform learning app (600+ commits) featuring bookmarks, progress tracking, search, and cloud sync. Built with Next.js, Flutter, TypeScript, Firebase, and Vercel."
+              projectId="TechieLearn"
+              projectType="web-app"
+              ghLink="https://github.com/jnvshubham7/TechieLearn"
+              demoLink="https://techielearn.in"
+            />
+          </Col>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCards
@@ -88,8 +114,7 @@ function Projects() {
             />
           </Col>
 
-
-
+       
 
           <Col md={4} className="project-card web-card">
             <ProjectCards
